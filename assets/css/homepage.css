@@ -1,0 +1,55 @@
+@import url('./variables.css');
+
+body.homepage {
+  background: rgb(252, 223, 226);
+}
+
+.home-banner {
+  height: 100vh;
+}
+
+/* Slider dots for banner animations */
+.slider-dots {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 100;
+  background: #fff;
+  padding: 17px 10px;
+  border-radius: 500px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid var(--color-dot);
+    background: var(--color-dot);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: var(--color-dot);
+      background: var(--color-dot);
+    }
+
+    &.active {
+      background: var(--color-process1);
+      border-color: var(--color-process1);
+    }
+  }
+}
+
+#banner-3 {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.an-text-title {
+  position: relative;
+}

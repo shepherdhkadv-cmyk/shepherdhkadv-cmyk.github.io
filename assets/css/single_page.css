@@ -1,0 +1,98 @@
+#in-page-navnav {
+  position: relative;
+}
+
+.single-page-header {
+  --cs-spacing: 100px;
+  --bg-height: 380px;
+  margin-top: calc(var(--cs-spacing) * -1);
+  padding-top: var(--cs-spacing);
+  padding-bottom: 80px;
+  display: flex;
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+
+  .page-title-wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+    padding-top: calc(var(--cs-spacing) / 2);
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url('/assets/images/single-page-header-obj.png');
+      position: absolute;
+      top: 0%;
+      right: -10%;
+      width: 70%;
+      height: var(--bg-height);
+      z-index: -1;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &::before {
+    content: "";
+    background-image: url('/assets/images/single-page-header-bg.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--bg-height);
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+}
+
+.page-template {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  @media screen and (min-width: 1025px) {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  .page-template-content-inner {
+    /* background: #fff;
+    padding: 60px 90px; */
+    max-width: 100%;
+    margin: auto;
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--color-introduction);
+      font-weight: 600;
+      margin-bottom: 1.875rem;
+    }
+    h3{
+      font-size: 1.2rem;
+      color: var(--color-introduction);
+      font-weight: 400;
+      margin-bottom: 0.938rem;
+    }
+    p {
+      color: #000;
+      text-align: justify;
+    }
+
+    .dot-divider {
+      width: 100%;
+      height: 3px;
+      margin: 2.5rem 0;
+      background-image: radial-gradient(circle, var(--color-secondary) 1.5px, transparent 1.5px);
+      background-size: 8px 3px;
+      background-position: 0 center;
+      background-repeat: repeat-x;
+    }
+  }
+}
