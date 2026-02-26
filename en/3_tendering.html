@@ -23,7 +23,7 @@
         <img src="/assets/images/m-3.svg" class="block md:hidden">
       </div>
       <div class="page-template-content-inner three">
-        <h2>&nbsp;</h2>
+        <h2 class="hidden md:block">&nbsp;</h2>
         <div class="flex-box-5-5">
           <img src="/assets/images/process3/image_1.png" class="item" loading="lazy" />
           <div class="cs-bullet item">
@@ -207,35 +207,9 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script src="../assets/js/lib/splide.js"></script>
   <script src="../assets/js/popup.min.js"></script>
   <script src="../assets/js/main.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const sliderOpt = {
-        perPage: 1,
-        gap: '1rem',
-        arrows: true,
-        fixedHeight: 350,
-        breakpoints: {
-          820: {
-            fixedHeight: 180
-          },
-        }
-      }
-      new Splide('#slider-1', { ...sliderOpt }).mount()
-      new Splide('#slider-1-1', { ...sliderOpt }).mount()
-      new Splide('#slider-2', { ...sliderOpt }).mount()
-      new Splide('#slider-3', { ...sliderOpt }).mount()
-      new Splide('#slider-4', { ...sliderOpt }).mount()
-      new Splide('#slider-5', { ...sliderOpt }).mount()
-      new Splide('#slider-6', { ...sliderOpt }).mount()
-      new Splide('#slider-7', { ...sliderOpt }).mount()
-      new Splide('#slider-8', { ...sliderOpt }).mount()
-      new Splide('#slider-9', { ...sliderOpt }).mount()
-      new Splide('#slider-10', { ...sliderOpt }).mount()
-    });
-  </script>
 </body>
 
 </html>
