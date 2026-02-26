@@ -11,17 +11,17 @@ body.homepage {
 /* Slider dots for banner animations */
 .slider-dots {
   position: fixed;
-  right: 40px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 15px;
   z-index: 100;
   background: #fff;
   padding: 17px 10px;
   border-radius: 500px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 821px) {
     display: flex;
   }
   .dot {
@@ -47,7 +47,7 @@ body.homepage {
 
 #banner-3 {
   padding-top: 80px;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 }
 
 .an-text-title {

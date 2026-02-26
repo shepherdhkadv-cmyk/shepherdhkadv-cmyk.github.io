@@ -7,6 +7,7 @@
   <title>HA project</title>
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
   <script src="../assets/js/lib/tailwindcss.js"></script>
+  <style type="text/tailwindcss">@theme {--breakpoint-md: 820px;}</style>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/modal.css">
   <link rel="stylesheet" href="../assets/css/slider.css">
@@ -14,13 +15,15 @@
   <link rel="stylesheet" href="../assets/css/process.css">
 </head>
 
-<body class="process-template process">
+<body class="process-template process three">
   <div class="content-container min-h-screen">
     <div class="page-template process-5">
       <div class="page-title-wrapper three">
-        <img src="/assets/images/process3_title.svg" >
+        <img src="/assets/images/process-3-title.svg" class="hidden md:block">
+        <img src="/assets/images/m-3.svg" class="block md:hidden">
       </div>
       <div class="page-template-content-inner three">
+        <h2>&nbsp;</h2>
         <div class="flex-box-5-5">
           <img src="/assets/images/process3/image_1.png" class="item" loading="lazy" />
           <div class="cs-bullet item">
@@ -212,20 +215,25 @@
       const sliderOpt = {
         perPage: 1,
         gap: '1rem',
-        arrows: false
+        arrows: true,
+        fixedHeight: 350,
+        breakpoints: {
+          820: {
+            fixedHeight: 180
+          },
+        }
       }
-      const fixedHeight = 330
-      new Splide('#slider-1', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-1-1', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-2', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-3', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-4', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-5', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-6', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-7', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-8', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-9', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-10', { ...sliderOpt, fixedHeight }).mount()
+      new Splide('#slider-1', { ...sliderOpt }).mount()
+      new Splide('#slider-1-1', { ...sliderOpt }).mount()
+      new Splide('#slider-2', { ...sliderOpt }).mount()
+      new Splide('#slider-3', { ...sliderOpt }).mount()
+      new Splide('#slider-4', { ...sliderOpt }).mount()
+      new Splide('#slider-5', { ...sliderOpt }).mount()
+      new Splide('#slider-6', { ...sliderOpt }).mount()
+      new Splide('#slider-7', { ...sliderOpt }).mount()
+      new Splide('#slider-8', { ...sliderOpt }).mount()
+      new Splide('#slider-9', { ...sliderOpt }).mount()
+      new Splide('#slider-10', { ...sliderOpt }).mount()
     });
   </script>
 </body>

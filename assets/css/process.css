@@ -1,12 +1,146 @@
 @import url('./variables.css');
-/* 
-  0 - 768
-  769-1670
-*/
 
 body.process-template {
   background: var(--color-processbg);
   line-height: 1.6;
+
+  &.one {
+    background: var(--color-processbg1);
+    .line-divider{
+      &:nth-child(odd of .line-divider)::after {
+        background-image: url('/assets/images/process1-divider-img.svg');
+        background-color: var(--color-processbg1);
+      }
+  
+      &:nth-child(even of .line-divider)::after {
+        background-image: url('/assets/images/process1-divider-img2.svg');
+        background-color: var(--color-processbg1);
+      }
+    }
+  }
+
+  &.two {
+    background: var(--color-processbg2);
+    .line-divider{
+      &:nth-child(odd of .line-divider)::after {
+        background-image: url('/assets/images/process2-divider-img.svg');
+        background-color: var(--color-processbg2);
+      }
+  
+      &:nth-child(even of .line-divider)::after {
+        background-image: url('/assets/images/process2-divider-img2.svg');
+        background-color: var(--color-processbg2);
+      }
+    }
+  }
+
+  &.three {
+    background: var(--color-processbg3);
+    .line-divider{
+      &:nth-child(odd of .line-divider)::after {
+        background-image: url('/assets/images/process3-divider-img.svg');
+        background-color: var(--color-processbg3);
+      }
+  
+      &:nth-child(even of .line-divider)::after {
+        background-image: url('/assets/images/process3-divider-img2.svg');
+        background-color: var(--color-processbg3);
+      }
+    }
+  }
+
+  &.four {
+    background: var(--color-processbg4);
+    .line-divider{
+      &:nth-child(odd of .line-divider)::after {
+        background-image: url('/assets/images/process4-divider-img.svg');
+        background-color: var(--color-processbg4);
+      }
+  
+      &:nth-child(even of .line-divider)::after {
+        background-image: url('/assets/images/process4-divider-img2.svg');
+        background-color: var(--color-processbg4);
+      }
+    }
+  }
+
+  &.five {
+    background: var(--color-processbg5);
+    .line-divider{
+      &:nth-child(odd of .line-divider)::after {
+        background-image: url('/assets/images/process5-divider-img.svg');
+        background-color: var(--color-processbg5);
+      }
+  
+      &:nth-child(even of .line-divider)::after {
+        background-image: url('/assets/images/process5-divider-img2.svg');
+        background-color: var(--color-processbg5);
+      }
+    }
+  }
+
+  @media screen and (min-width: 821px) {
+    &.one {
+      .content-container {
+        &::before {
+          background-image: url('/assets/images/process-content-left.svg');
+        }
+
+        &::after {
+          background-image: url('/assets/images/process-content-right.svg');
+        }
+      }
+    }
+
+    &.two {
+      .content-container {
+        &::before {
+          background-image: url('/assets/images/process-2-bg-l.svg');
+        }
+
+        &::after {
+          background-image: url('/assets/images/process-2-bg-r.svg');
+        }
+      }
+    }
+
+    &.three {
+      .content-container {
+        &::before {
+          background-image: url('/assets/images/process-3-bg-l.svg');
+        }
+
+        &::after {
+          background-image: url('/assets/images/process-3-bg-r.svg');
+        }
+      }
+    }
+
+    &.four {
+      .content-container {
+        &::before {
+          background-image: url('/assets/images/process-4-bg-l.svg');
+        }
+
+        &::after {
+          background-image: url('/assets/images/process-4-bg-r.svg');
+        }
+      }
+    }
+
+    &.five {
+      .content-container {
+        &::before {
+          background-image: url('/assets/images/process-5-bg-l.svg');
+        }
+
+        &::after {
+          background-image: url('/assets/images/process-5-bg-r.svg');
+        }
+      }
+    }
+  }
+
 
   &::before {
     content: "";
@@ -17,7 +151,7 @@ body.process-template {
     top: 0;
     right: 0;
     z-index: -1;
-    background-image: url(/assets/images/process_bg_right_top.svg);
+    background-image: url('/assets/images/process_bg_right_top.svg');
     background-position: right top;
     background-size: 50%;
     opacity: 0.2;
@@ -31,40 +165,57 @@ body.process-template {
     content: "";
     background-repeat: no-repeat;
     position: fixed;
-    height: 400px;
+    height: 160px;
     width: 320px;
     top: 25%;
-    left: 0;
+    left: -15%;
     z-index: -1;
-    background-image: url('/assets/images/process-content-left.svg');
+
+    @media screen and (min-width: 821px) {
+      left: 0;
+      height: 400px;
+      width: 320px;
+    }
   }
 
   &::after {
     content: "";
     background-repeat: no-repeat;
     position: fixed;
-    height: 550px;
-    width: 310px;
     bottom: 0;
-    right: 0;
     z-index: -1;
-    background-image: url('/assets/images/process-content-right.svg');
+    height: 210px;
+    width: 80px;
+    right: -4%;
+
+    @media screen and (min-width: 821px) {
+      right: 0;
+      height: 550px;
+      width: 310px;
+    }
   }
 }
+
+
+
 
 /* only for process 5 */
 .page-template.process-5 {
   --pl: 110px;
   --m-pl: 60px;
-  padding-top: 120px;
-  padding-bottom: 0 !important;
+
+  @media screen and (min-width: 821px) {
+    padding-top: 120px;
+    padding-bottom: 0 !important;
+  }
 
   /* only for process 5's one */
   .page-title-wrapper {
     &:not(.in-content-title) {
+      margin-bottom: 20px;
+
       &::after {
-        content: "";
-        background-image: url('/assets/images/process-1-header-img.png');
+        content: unset;
         width: 400px;
         height: 350px;
         background-repeat: no-repeat;
@@ -74,26 +225,61 @@ body.process-template {
         right: 0;
         transform: translate(0%, -40%);
       }
-    }
-    img{
-      /* width: 60%; */
-      height: 150px;
-    }
-    &.five{
-      img{
-        height: 130px;
+
+      @media screen and (min-width: 821px) {
+        &::after {
+          content: "";
+        }
+
+        &.one {
+          &::after {
+            background-image: url('/assets/images/process-1-header-img.png');
+          }
+        }
+
+        &.two {
+          &::after {
+            background-image: url('/assets/images/process-2-header-img.png');
+          }
+        }
+
+        &.three {
+          &::after {
+            background-image: url('/assets/images/process-3-header-img.png');
+          }
+        }
+
+        &.four {
+          &::after {
+            background-image: url('/assets/images/process-4-header-img.png');
+          }
+        }
+
+        &.five {
+          &::after {
+            background-image: url('/assets/images/process-5-header-img.png');
+          }
+        }
+      }
+
+      img {
+        height: 70px;
+
+        @media screen and (min-width: 821px) {
+          height: 170px;
+        }
       }
     }
   }
 
   .page-template-content-inner {
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
     padding-bottom: 80px;
     max-width: 100%;
     background: transparent;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 821px) {
       padding-left: 0px;
       padding-right: 0px;
     }
@@ -101,21 +287,32 @@ body.process-template {
     h2 {
       line-height: 1.2;
       font-weight: bold;
-      font-size: 1.75rem;
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 821px) {
+        font-size: 1.75rem;
+      }
     }
 
     h3 {
       line-height: 1.2;
-      font-weight: 700;
-      font-size: 1.5rem;
+      font-weight: bold;
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+
+      @media screen and (min-width: 821px) {
+        font-size: 1.75rem;
+      }
     }
 
-    p{
+    p {
       font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 1.9rem;
+      margin-bottom: 1.875rem;
     }
-    ul{
+
+    ul {
       line-height: 1.8;
     }
 
@@ -123,12 +320,37 @@ body.process-template {
       width: 100%;
       height: 1px;
       border-top: 1px solid #f06523;
-      margin: 50px 0;
+      margin: 70px 0;
+      position: relative;
+      @media screen and (min-width: 821px) {
+        margin: 50px 0;
+      }
+
+      &::after {
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 110px;
+        height: 60px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+      }
+
+      @media screen and (min-width: 821px) {
+        &::after {
+          content: unset;
+        }
+      }
     }
-    b{
+
+    b {
       display: block;
       width: 100%;
     }
+
     /* process one !! */
     &.one {
 
@@ -196,7 +418,20 @@ body.process-template {
   display: flex;
   gap: 30px;
   margin-bottom: 1rem;
+  flex-direction: column;
+
   .item {
-    width: 50%;
+    width: 100%;
+  }
+
+  align-items: center;
+
+  @media screen and (min-width: 821px) {
+    flex-direction: row;
+    align-items: start;
+
+    .item {
+      width: 50%;
+    }
   }
 }

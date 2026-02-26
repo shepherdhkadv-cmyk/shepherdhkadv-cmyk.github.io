@@ -7,6 +7,7 @@
   <title>HA project</title>
   <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
   <script src="../assets/js/lib/tailwindcss.js"></script>
+  <style type="text/tailwindcss">@theme {--breakpoint-md: 820px;}</style>
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/modal.css">
   <link rel="stylesheet" href="../assets/css/slider.css">
@@ -14,11 +15,12 @@
   <link rel="stylesheet" href="../assets/css/process.css">
 </head>
 
-<body class="process-template process">
+<body class="process-template process five">
   <div class="content-container min-h-screen">
     <div class="page-template process-5">
       <div class="page-title-wrapper five">
-        <img src="/assets/images/process5_title.svg" >
+        <img src="/assets/images/process-5-title.svg" class="hidden md:block">
+        <img src="/assets/images/m-5.svg" class="block md:hidden">
       </div>
       <div class="page-template-content-inner five">
         <h2>Architectural Safety</h2>
@@ -44,7 +46,7 @@
           platform is installed to ensure safe and convenient access for maintenance personnel.
         </p>
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-1">
+          <div class="splide" aria-label="Splide with Captions" id="slider-1">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -80,7 +82,7 @@
           maintenance. To ensure safe access for maintenance personnel, a suspended steel platform is provided.</p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-2">
+          <div class="splide" aria-label="Splide with Captions" id="slider-2">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -125,7 +127,7 @@
         </p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-3">
+          <div class="splide" aria-label="Splide with Captions" id="slider-3">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -168,7 +170,7 @@
         </p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-4">
+          <div class="splide" aria-label="Splide with Captions" id="slider-4">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -205,7 +207,7 @@
           shallower depth to facilitate operation and maintenance of windows.</p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-5">
+          <div class="splide" aria-label="Splide with Captions" id="slider-5">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -225,7 +227,7 @@
           </div>
         </div>
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-6">
+          <div class="splide" aria-label="Splide with Captions" id="slider-6">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -257,7 +259,7 @@
           points for workers. </p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-7">
+          <div class="splide" aria-label="Splide with Captions" id="slider-7">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -278,7 +280,7 @@
         </div>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-8">
+          <div class="splide" aria-label="Splide with Captions" id="slider-8">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -352,7 +354,7 @@
           escalator.
         </p>
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-9">
+          <div class="splide" aria-label="Splide with Captions" id="slider-9">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -378,10 +380,15 @@
           </div>
         </div>
         <b>Safety inside Plant Rooms</b>
-        <p>To provide safe working environment for the maintenance workers, all mechanical moving parts of the machine inside plant rooms should be effectively guarded to avoid bodily contact and prevent injury.   Insulated rubber mats are also recommended to be placed adjacent to electrical panels/switches for better protection against electric shock during maintenance work.  For objects such as plinth, kerb, floor trunking etc. protruding from the floor/corners which may possess tripping hazards, the objects should be painted with clear and prominent colour (such as yellow and black stripes) as warning signs to alert the workers.</p>
+        <p>To provide safe working environment for the maintenance workers, all mechanical moving parts of the machine
+          inside plant rooms should be effectively guarded to avoid bodily contact and prevent injury. Insulated rubber
+          mats are also recommended to be placed adjacent to electrical panels/switches for better protection against
+          electric shock during maintenance work. For objects such as plinth, kerb, floor trunking etc. protruding from
+          the floor/corners which may possess tripping hazards, the objects should be painted with clear and prominent
+          colour (such as yellow and black stripes) as warning signs to alert the workers.</p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-10">
+          <div class="splide" aria-label="Splide with Captions" id="slider-10">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -407,11 +414,15 @@
           </div>
         </div>
         <b>Volume Control Devices for Refuse Chutes</b>
-        <p>Refuse Chute is provided for each domestic block with waste collected in refuse bins located in the ground floor refuse collection chamber. However, workers may be injured due to hazards arising from overfilled refuse bins. To address this safety concern, a Volume Control Storage Device has been incorporated into the refuse chute system to regulate the volume of refuse, preventing overfilling and reducing the risk of injury to maintenance and refuse collection workers.
+        <p>Refuse Chute is provided for each domestic block with waste collected in refuse bins located in the ground
+          floor refuse collection chamber. However, workers may be injured due to hazards arising from overfilled refuse
+          bins. To address this safety concern, a Volume Control Storage Device has been incorporated into the refuse
+          chute system to regulate the volume of refuse, preventing overfilling and reducing the risk of injury to
+          maintenance and refuse collection workers.
         </p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-11">
+          <div class="splide" aria-label="Splide with Captions" id="slider-11">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -431,10 +442,16 @@
           </div>
         </div>
         <b>Bin Cleansing Machine for Safe Waste Handling</b>
-        <p>The refuse bins used have a capacity of 660 litres, with dimensions approximately 1370 mm long × 775 mm wide × 1185 mm high, and weigh around 35kg (net weight when empty). These bins require regular cleaning and maintenance to ensure hygiene and safety. Traditionally, workers manually maneuver the bins during washing, which demands significant physical effort and increases the risk of strain or injury. To reduce the physical burden on workers and enhance safety, a Bin Cleaning Machine has been introduced. This machine automatically lifts the bins, making it easier and safer for workers to clean the interior without excessive manual handling.</p>
+        <p>The refuse bins used have a capacity of 660 litres, with dimensions approximately 1370 mm long × 775 mm wide
+          × 1185 mm high, and weigh around 35kg (net weight when empty). These bins require regular cleaning and
+          maintenance to ensure hygiene and safety. Traditionally, workers manually maneuver the bins during washing,
+          which demands significant physical effort and increases the risk of strain or injury. To reduce the physical
+          burden on workers and enhance safety, a Bin Cleaning Machine has been introduced. This machine automatically
+          lifts the bins, making it easier and safer for workers to clean the interior without excessive manual
+          handling.</p>
 
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-12">
+          <div class="splide" aria-label="Splide with Captions" id="slider-12">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -462,9 +479,12 @@
         <div class="line-divider"></div>
         <h2>Slope Maintenance Access</h2>
         <b>Safe Access for Slope Maintenance</b>
-        <p>Slopes require regular inspection and maintenance to ensure their safety and functionality. To provide safe access for workers carrying out these tasks, maintenance paths and staircases are installed at regular intervals. These provisions enable workers to perform inspections and maintenance activities safely and efficiently, minimizing the risk of accidents during access.</p>
+        <p>Slopes require regular inspection and maintenance to ensure their safety and functionality. To provide safe
+          access for workers carrying out these tasks, maintenance paths and staircases are installed at regular
+          intervals. These provisions enable workers to perform inspections and maintenance activities safely and
+          efficiently, minimizing the risk of accidents during access.</p>
         <div class="slider-wrapper">
-          <div class="splide my-5" aria-label="Splide with Captions" id="slider-13">
+          <div class="splide" aria-label="Splide with Captions" id="slider-13">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -495,22 +515,27 @@
       const sliderOpt = {
         perPage: 1,
         gap: '1rem',
-        arrows: false
+        arrows: true,
+        fixedHeight: 350,
+        breakpoints: {
+          820: {
+            fixedHeight: 180
+          },
+        }
       }
-      const fixedHeight = 330
-      new Splide('#slider-1', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-2', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-3', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-4', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-5', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-6', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-7', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-8', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-9', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-10', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-11', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-12', { ...sliderOpt, fixedHeight }).mount()
-      new Splide('#slider-13', { ...sliderOpt, fixedHeight }).mount()
+      new Splide('#slider-1', { ...sliderOpt }).mount()
+      new Splide('#slider-2', { ...sliderOpt }).mount()
+      new Splide('#slider-3', { ...sliderOpt }).mount()
+      new Splide('#slider-4', { ...sliderOpt }).mount()
+      new Splide('#slider-5', { ...sliderOpt }).mount()
+      new Splide('#slider-6', { ...sliderOpt }).mount()
+      new Splide('#slider-7', { ...sliderOpt }).mount()
+      new Splide('#slider-8', { ...sliderOpt }).mount()
+      new Splide('#slider-9', { ...sliderOpt }).mount()
+      new Splide('#slider-10', { ...sliderOpt }).mount()
+      new Splide('#slider-11', { ...sliderOpt }).mount()
+      new Splide('#slider-12', { ...sliderOpt }).mount()
+      new Splide('#slider-13', { ...sliderOpt }).mount()
     });
   </script>
 </body>
